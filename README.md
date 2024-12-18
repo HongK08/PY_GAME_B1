@@ -52,3 +52,24 @@
         monitor.fill(c)  # 화면을 선택한 색상으로 채움
         pygame.display.update()  # 화면 업데이트
         print("#", end="")  # '#' 출력 (프로그레스 표시용)
+        
+#############################################################################
+
+    import pygame, random, sys  # 필요한 모듈 임포트
+    
+    colors = ["red", "green", "blue"]  # 색상 리스트
+    
+    pygame.init()  # Pygame 초기화
+    monitor = pygame.display.set_mode((500, 700))  # 화면 크기 설정
+    c = random.choice(colors)  # 랜덤 색상 선택
+    turtle = pygame.image.load('C:/Temp/turtle.png')  # 거북이 이미지 로드
+    
+    while True:
+        monitor.fill(c)  # 화면을 선택한 색상으로 채움
+        monitor.blit(turtle, (200, 300))  # 거북이 이미지를 (200, 300) 좌표에 그리기
+        pygame.display.update()  # 화면 업데이트
+    
+        for event in pygame.event.get():  # 이벤트 처리 루프
+            if event.type == pygame.QUIT:  # 종료 이벤트 처리
+                pygame.quit()  # Pygame 종료
+                sys.exit()  # 프로그램 종료
