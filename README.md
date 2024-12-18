@@ -40,8 +40,8 @@
         print(f"이미지 저장 성공!")  # 이미지 저장 성공 메시지
 
 ###############################################################################
-        import pygame, random, sys  # 필요한 모듈 임포트
-
+        
+    import pygame, random, sys  # 필요한 모듈 임포트
     colors = ["red", "green", "blue"]  # 색상 리스트
     
     pygame.init()  # Pygame 초기화
