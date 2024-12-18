@@ -38,3 +38,17 @@
         print(f"저장할 파일: {filename}")  # 저장할 파일 경로 출력
         img.save(filename)
         print(f"이미지 저장 성공!")  # 이미지 저장 성공 메시지
+
+###############################################################################
+    import pygame, random, sys  # 필요한 모듈 임포트
+
+    colors = ["red", "green", "blue"]  # 색상 리스트
+    
+    pygame.init()  # Pygame 초기화
+    monitor = pygame.display.set_mode((500, 700))  # 화면 크기 설정
+    
+    while True:
+        c = random.choice(colors)  # 색상 리스트에서 랜덤으로 색상 선택
+        monitor.fill(c)  # 화면을 선택한 색상으로 채움
+        pygame.display.update()  # 화면 업데이트
+        print("#", end="")  # '#' 출력 (프로그레스 표시용)
