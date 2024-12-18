@@ -77,53 +77,53 @@
 #############################################################################
 
  import pygame, random, sys
-
-#색상 목록
-
-colors = ["red", "green", "blue"]
-
-#Pygame 초기화
-
-pygame.init()
-
-#키 반복 설정: 5ms 지연 후 5ms 간격으로 반복
-
-pygame.key.set_repeat(5, 5)
-
-#화면 설정: 500x700 크기
-
-monitor = pygame.display.set_mode((500, 700))
-
-#랜덤한 색상 선택
-
-c = random.choice(colors)
-
-#거북이 이미지 로드
-
-turtle = pygame.image.load('C:/Temp/turtle.png')
-
-#거북이 초기 위치 설정
-
-tx, ty = 200, 300
-
-#게임 루프
-
-while True:
-    # 화면 채우기
-    monitor.fill(c)
-
-    # 거북이 그리기
-    monitor.blit(turtle, (tx, ty))
-
-    # 화면 업데이트
-    pygame.display.update()
-
-    # 이벤트 처리
-    for event in pygame.event.get():
-        # 창 닫기 이벤트
-        if event.type == pygame.QUIT:
-            pygame.quit()
-            sys.exit()
+    
+    #색상 목록
+    
+    colors = ["red", "green", "blue"]
+    
+    #Pygame 초기화
+    
+    pygame.init()
+    
+    #키 반복 설정: 5ms 지연 후 5ms 간격으로 반복
+    
+    pygame.key.set_repeat(5, 5)
+    
+    #화면 설정: 500x700 크기
+    
+    monitor = pygame.display.set_mode((500, 700))
+    
+    #랜덤한 색상 선택
+    
+    c = random.choice(colors)
+    
+    #거북이 이미지 로드
+    
+    turtle = pygame.image.load('C:/Temp/turtle.png')
+    
+    #거북이 초기 위치 설정
+    
+    tx, ty = 200, 300
+    
+    #게임 루프
+    
+    while True:
+        # 화면 채우기
+        monitor.fill(c)
+    
+        # 거북이 그리기
+        monitor.blit(turtle, (tx, ty))
+    
+        # 화면 업데이트
+        pygame.display.update()
+    
+        # 이벤트 처리
+        for event in pygame.event.get():
+            # 창 닫기 이벤트
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
 
         # 키보드 입력 이벤트
         if event.type == pygame.KEYDOWN:
