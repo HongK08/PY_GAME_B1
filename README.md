@@ -1,6 +1,6 @@
 # PY_GAME_B1
 
-    import random  # 랜덤 모듈 임포트 (무작위 수 생성)
+import random  # 랜덤 모듈 임포트 (무작위 수 생성)
 
 number = random.randint(1, 99)  # 1부터 99까지의 임의의 정수 생성
 if number < 10:  # 숫자가 10보다 작으면
