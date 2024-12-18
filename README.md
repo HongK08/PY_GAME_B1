@@ -8,11 +8,11 @@ if number < 10:  # 숫자가 10보다 작으면
 else:
     number = str(number)  # 그 외에는 문자열로 변환
 
-# 파일 이름 생성
+#파일 이름 생성
 filename = "C:/photo/picture" + number + ".jpg"
 print(f"읽을 파일: {filename}")  # 읽을 파일 경로 출력
 
-# 이미지 열기
+#이미지 열기
 try:
     img = Image.open(filename)
     print(f"이미지 열기 성공!")  # 이미지 열기 성공 메시지
